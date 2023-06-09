@@ -18,14 +18,12 @@ def solution(n, wires):
         check[wires[i][1]][wires[i][0]] = 0
         dfs(wires[i][0])
         check1 = sum(visited)
-        # print(check1)
         visited = [0] * (n + 1)
         dfs(wires[i][1])
         check2 = sum(visited)
-        # print(check2)
         answer.append(abs(check1 - check2))
     return min(answer)
 
-print(solution(9, [[1,3], [2,3], [3,4], [4,5], [4,6], [4,7], [7,8], [7,9]]))
-print(solution(4, [[1,2],[2,3],[3,4]]))
-print(solution(7, [[1,2],[2,7],[3,7],[3,4],[4,5],[6,7]]))
+# print(solution(9, [[1,3], [2,3], [3,4], [4,5], [4,6], [4,7], [7,8], [7,9]]))
+# print(solution(4, [[1,2],[2,3],[3,4]]))
+# print(solution(7, [[1,2],[2,7],[3,7],[3,4],[4,5],[6,7]]))
