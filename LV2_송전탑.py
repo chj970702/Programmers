@@ -7,7 +7,7 @@ def solution(n, wires):
                 dfs(k)
 
     answer = []
-
+    print("test")
     for i in range(len(wires)):
         check = [[0] * (n + 1) for _ in range(n + 1)]
         for j in range(len(wires)):
